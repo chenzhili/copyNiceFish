@@ -1,0 +1,8 @@
+/* You can add global styles to this file, and also import other style files */
+/*css重置*/
+html{font-size:1em;}
+p,h1,h2,h3,h4,h5,td,tr,table,tbody,tfoot,ul,li,ol,body{padding:0;margin:0;}
+body a{
+	color:#fff;
+}
+body a:hover{color:#fff;}
