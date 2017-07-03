@@ -1,5 +1,5 @@
-.app_nav{background-color:#6f5499;color:#fff;padding:0 1.857rem;margin-bottom:0 !important;}  
-.app_body{padding:3.75em 2.7945rem ;}
+.app_nav{background-color:#6f5499;color:#fff;padding:0 1.857rem;margin-bottom:0 !important;}
+.app_body{padding:3.75em 2.7945rem ;margin-top:1.875rem;}
 .navbar-toggle span{background-color:#fff;}
-.app_footer{position:absolute;bottom:0;left:0;right:0;background-color:#263238;color:#fff;height:6.857rem;}
+.app_footer{position:fixed;bottom:0;left:0;right:0;background-color:#263238;color:#fff;height:6.857rem;}
 .app_footer span{color:#337ab7;}

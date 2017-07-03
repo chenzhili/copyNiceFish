@@ -9,16 +9,19 @@ import { PostListService } from "./service/postList.service";
 })
 export class PostComponent implements OnInit {
   public authorList;
+  public total;
   constructor(private postListService:PostListService) { }
   getAuthor():void{
   	this.postListService.getAuthorList().then(data=>{
-  		console.log(data);
+  		this.authorList = JSON.parse(data["_body"]).items;
+  		this.total = JSON.parse(data["_body"]).total;
+  		console.log(this.authorList);
   	}).catch(err=>{
   		console.log(err);
   	});
   }
   ngOnInit() {
   	this.getAuthor();
-  } 
+  }
 
 }

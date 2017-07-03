@@ -10,33 +10,23 @@
 			  </span>
 			</div>
 			</div>
-			<div class="col-md-2"> 
+			<div class="col-md-2">
 				<button class="btn btn-success">发布文章</button>
 			</div>
 		</div>
-		<div class="search_content">
-			<p>如果你是新手，请务必先看完本项目的视频教程</p>
+		<div class="search_content" *ngFor="let item of authorList"> 
+			<p>{{item.title}}</p>
 			<p>
-				<span>顶：5555</span>
-				<span>信：10000</span>
-				<span>看：15555</span>
-				<span>大漠穷秋</span>
-				<span>2017-05-17 10:44</span>
-			</p>
-		</div>
-		<div class="search_content">
-			<p>如果你是新手，请务必先看完本项目的视频教程</p>
-			<p>
-				<span>顶：5555</span>
-				<span>信：10000</span>
-				<span>看：15555</span>
-				<span>大漠穷秋</span>
-				<span>2017-05-17 10:44</span>
+				<span>顶：{{item.likedTimes}}</span>
+				<span>信：{{item.commentTimes}}</span>
+				<span>看：{{item.readTimes}}</span>
+				<span>{{item.userName}}</span>
+				<span>{{item.postTime}}</span>
 			</p>
 		</div>
 	</div>
 	<div class="col-md-3">
-		<div class="panel panel-default"> 
+		<div class="panel panel-default">
 		  <div class="panel-heading">社交媒体</div>
 		  <div class="panel-body">
 		    官方微博
@@ -48,7 +38,7 @@
 		    有关视频教程
 		  </div>
 		</div>
-		<div class="panel panel-default"> 
+		<div class="panel panel-default">
 		  <div class="panel-heading">QQ群-请勿加多个</div>
 		  <div class="panel-body">
 		    Angular 1区：286047042（满）
