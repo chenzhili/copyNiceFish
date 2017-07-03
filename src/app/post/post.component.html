@@ -14,7 +14,7 @@
 				<button class="btn btn-success">发布文章</button>
 			</div>
 		</div>
-		<div class="search_content" *ngFor="let item of authorList"> 
+		<div class="search_content" *ngFor="let item of getList"> 
 			<p>{{item.title}}</p>
 			<p>
 				<span>顶：{{item.likedTimes}}</span>
@@ -52,3 +52,20 @@
 		</div>
 	</div>
 </div>
+<nav aria-label="Page navigation" class="post_page"> 
+  <ul class="pagination">
+  	<li><a (click)="skipPage(1)">首页</a></li>
+    <li>
+      <a aria-label="Previous" (click)="skipPage('-1')">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li *ngFor="let item of pageArr" [ngClass]="{'active':p==item}"><a (click)="skipPage(item)">{{item}}</a></li> 
+    <li>
+      <a aria-label="Next" (click)="skipPage('+1')">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+    <li><a (click)="skipPage(page)">末页</a></li>
+  </ul>
+</nav>
