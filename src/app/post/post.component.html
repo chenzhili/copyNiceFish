@@ -15,7 +15,7 @@
 			</div>
 		</div>
 		<div class="search_content" *ngFor="let item of getList"> 
-			<p>{{item.title}}</p>
+			<p>{{item.title}}</p> 
 			<p>
 				<span>顶：{{item.likedTimes}}</span>
 				<span>信：{{item.commentTimes}}</span>
@@ -25,7 +25,7 @@
 			</p>
 		</div>
 	</div>
-	<div class="col-md-3">
+	<div class="col-md-3 col-xs-0 post_panel">
 		<div class="panel panel-default">
 		  <div class="panel-heading">社交媒体</div>
 		  <div class="panel-body">
@@ -55,14 +55,14 @@
 <nav aria-label="Page navigation" class="post_page"> 
   <ul class="pagination">
   	<li><a (click)="skipPage(1)">首页</a></li>
-    <li>
-      <a aria-label="Previous" (click)="skipPage('-1')">
+    <li> 
+      <a aria-label="Previous" (click)="skipPage('f1')">
         <span aria-hidden="true">&laquo;</span>
       </a>
     </li>
     <li *ngFor="let item of pageArr" [ngClass]="{'active':p==item}"><a (click)="skipPage(item)">{{item}}</a></li> 
     <li>
-      <a aria-label="Next" (click)="skipPage('+1')">
+      <a aria-label="Next" (click)="skipPage('z1')">
         <span aria-hidden="true">&raquo;</span>
       </a>
     </li>

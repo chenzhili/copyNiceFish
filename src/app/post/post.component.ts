@@ -31,14 +31,18 @@ export class PostComponent implements OnInit {
   	});
   }
   skipPage(page){
-    if(page == '+1'){
-      this.p++;
-    }else if(page == '-1'){
-      this.p--;
+    if(page == 'z1'){ 
+      if(this.p < this.page){ 
+        this.p++;  
+      }
+    }else if(page == 'f1'){ 
+      if(this.p > 1){
+         this.p--;
+      }
     }else{
       this.p = page;
     }
-    if(page == this.page){
+    if(this.p == this.page){ 
       this.getList = this.authorList.slice(5*(this.p-1));
     }else{
       this.getList = this.authorList.slice(5*(this.p-1),5*(this.p-1)+5);
