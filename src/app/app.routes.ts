@@ -24,14 +24,20 @@ export class AppRouterModule{}
 import { RouterModule } from '@angular/router';
 
 import { PostComponent } from "./post/post.component";
-export const appRoutes:any = [
+import { LoginComponent } from "./login/login.component";
+
+export const appRoutes:any = [ 
 	{
-		path:"posts", 
+		path:"posts",  
 		component:PostComponent
 	},
-	{
-		path:"",
-		redirectTo:"/posts", 
-		pathMatch:"full"
-	}
+  {
+    path:"login",
+    component:LoginComponent
+  },
+  {
+    path:"",
+    redirectTo:"/posts", 
+    pathMatch:"full"
+  }
 ];
