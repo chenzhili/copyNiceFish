@@ -8,16 +8,16 @@ import { User } from "./userObject";
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'] 
 })
+
 export class LoginComponent implements OnInit {
+  public user = new User("","");
   
-  constructor(public user:User) { 
-  
-  this.user = new User("","");
+  constructor() { 
 
   } 
 
   ngOnInit() {
-
+  	console.log(this.user.userName);
   }
 
 }

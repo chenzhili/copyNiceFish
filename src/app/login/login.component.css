@@ -1,0 +1,2 @@
+.ng-dirty.ng-invalid[required]{border-left:5px solid #f00;}
+.ng-dirty.ng-valid[required]{border-left:5px solid #0f0;}
