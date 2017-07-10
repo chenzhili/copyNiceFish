@@ -64,6 +64,7 @@ export class PostComponent implements OnInit {  //class类里只会出现 属性
 
   constructor(private postListService:PostListService) { }
   getAuthor():void{
+    /*这里获取数据*/
   	this.postListService.getAuthorList().then(data=>{
   		this.authorList = JSON.parse(data["_body"]).items;
   		this.total = JSON.parse(data["_body"]).total;
